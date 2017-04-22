@@ -1,0 +1,61 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body style="background-color:rgb(128,128,128)">
+
+<table class="table table-bordered" style="background-color:rgb(255,77,77)">
+  <tr>
+      <th>First_name</th>
+      <th>Last_name</th>
+      <th>Street_add</th>
+      <th>Street_add2</th>
+      <th>city</th>
+      <th>state</th>
+      <th>zip</th>
+
+  </tr>
+  {% for i in abc %}
+  <tr>
+    <td>{{i.First_name}}</td>
+    <td>{{i.Last_name}}</td>
+    <td>{{i.Street_add}}</td>
+    <td>{{i.Street_add2}}</td>
+    <td>{{i.city}}</td>
+    <td>{{i.state}}</td>
+    <td>{{i.zip}}</td>
+  </tr>
+  {% endfor %}
+</table>
+<div style="background-color:rgb(255,77,77)">
+    <table class="table table-bordered" >
+  <tr>
+      <th>First_name</th>
+      <th>Last_name</th>
+      <th>email</th>
+      <th>areac</th>
+      <th>phone</th>
+
+
+  </tr>
+  {% for i in abc %}
+  <tr>
+    <td>{{i.First_name}}</td>
+    <td>{{i.Last_name}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.areac}}</td>
+    <td>{{i.phone}}</td>
+  </tr>
+  {% endfor %}
+
+
+</table>
+</div>
+
+
+</body>
+</html>
